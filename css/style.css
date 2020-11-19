@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap");
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Asap", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: linear-gradient(#5c258d, #4389a2);
+  height: 100vh;
+  color: #f1f1f1;
+}
+
+#navbar {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 12px 8px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+#navbar span{
+  font-weight: bold;
+  user-select: none;
+}
+
+#placar {
+  margin: 30px auto 0;
+  text-align: center;
+}
+
+#placar h2{
+  font-weight: normal;
+}
+
+#placar > div {
+  display: inline-flex;
+  margin: 15px 20px 0;
+  align-items: center;
+}
+
+#placar img {
+  width: 40px;
+  margin: 10px;
+}
+
+/* essa animação serve para indicar de quem é a vez */
+.turn{
+	animation: animate 1.5s ease infinite;
+}
+
+@keyframes animate {
+	0%{
+		transform: translateX(-2px);
+	}
+	50%{
+		transform: translateX(2px);
+	}
+	100%{
+		transform: translateX(-2px);
+	}
+}
+
+.game {
+  width: 450px;
+  height: 450px;
+  margin: 10px auto 0;
+  background-color: #34495e;
+  border: 6px solid #2c3e50;
+  border-radius: 10px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.game > div {
+  border: 6px solid #2c3e50;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.winner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 25px;
+  transition: 0.3s ease;
+}
+
+.btn {
+  background: #34495e;
+  color: #f1f1f1;
+  padding: 15px 30px;
+  margin: 0px auto;
+  display: table;
+  border: solid 2px #2c3e50;
+  border-radius: 50px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #5c258d;
+  border: solid 2px #5c258d;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <nav id="navbar">
+      <span>Tic Tac Toe</span>
+    </nav>
+
+    <div id="placar">
+      <h2>Placar</h2>
+      <div>
+        <img id="turnX" src="../icons/close.png">
+        <span id="close"></span>
+      </div>
+      <div>
+        <img id="turnO" src="../icons/circle.png">
+        <span id="circle"></span>
+      </div>
+      <div>
+        <img src="../icons/idosa.png">
+        <span id="velha"></span>
+      </div>
+    </div>
+
+    <div class="game"></div>
+
+    <div class="winner"></div>
+
+    <script type="text/javascript" src="js/tic-tac-toe.js"></script>
+    <script type="text/javascript">
+      tic_tac_toe.init(document.querySelector(".game"));
+      tic_tac_toe.start();
+    </script>
+  </body>
+</html>
